@@ -10,16 +10,16 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-const users = [
-    { id: 1, name: 'John Doe', email: 'john@example.com' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
-    { id: 3, name: 'Alice Johnson', email: 'alice@example.com' },
-    { id: 4, name: 'Bob Brown', email: 'bob@example.com' },
-    { id: 5, name: 'Charlie Davis', email: 'charlie@example.com' }
+const posts = [
+    { id: 1, title: 'First Post', content: 'This is the first post' },
+    { id: 2, title: 'Second Post', content: 'This is the second post' },
+    { id: 3, title: 'Third Post', content: 'This is the third post' },
+    { id: 4, title: 'Fourth Post', content: 'This is the fourth post' },
+    { id: 5, title: 'Fifth Post', content: 'This is the fifth post' }
 ];
 
-app.get('/users', (req, res) => {
-    res.json(users);
+app.get('/posts', (req, res) => {
+    res.json(posts);
 });
 
 app.listen(PORT, () => {
